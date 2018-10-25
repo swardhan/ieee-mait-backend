@@ -54,4 +54,10 @@ Rails.application.configure do
 
   #Store File Locally
   config.active_storage.service = :local
+  config.after_initialize do
+     Rails.application.routes.default_url_options[:host] = 'localhost:3001'
+  end
+
 end
+
+
